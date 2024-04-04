@@ -1,4 +1,4 @@
-## Note for GIT
+## Local Setup
 * Install npm -> `npm install`
 * Run project -> `npm run dev` then go to 'http://localhost:[port]/src/index.html to view site'
 
