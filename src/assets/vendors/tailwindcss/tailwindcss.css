@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    @font-face {
+      font-family: 'ITC Garamond Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./../fonts/ITC-Garamond-Condensed.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'ITC Garamond Condensed';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./../fonts/ITC-Garamond-Condensed-Italic.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'GT Alpina Typewriter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(./../fonts/GT-Alpina-Typewriter-Light.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'GT Alpina Typewriter';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./../fonts/GT-Alpina-Typewriter-Light-Italic.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'GT Alpina Typewriter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(./../fonts/GT-Alpina-Typewriter-Medium.woff2) format('woff2');
+    }
+    html {
+      font-family: 'GT Alpina Typewriter', system-ui, sans-serif;
+    }
+  }

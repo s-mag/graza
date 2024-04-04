@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>"Drizzle" & "Sizzle" Olive Oil | Graza</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="./assets/images/favicon.png" rel="icon" type="image/png" />
+        <link rel="stylesheet" href="./assets/vendors/swiper@11.1.0/swiper-bundle.min.css">
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/custom.css" />
+	</head>
+	<body class="flex flex-col min-h-screen text-text bg-background">
+		<header id="header" class="absolute top-0 inset-x-0">
+			<div id="header-main" class="relative">
+				<div id="header-inner" class="text-tex absolute inset-0 h-header z-10 transition-colors">
+					<div id="promo-bar" class="border-b border-solid border-text z-10 relative bg-background">
+						<div class="container text-center h-promo flex items-center justify-center font-medium uppercase text-xs">
+							FREE COOKLET WITH EVERY ORDER!
+						</div>
+					</div>
+					<div id="header-container" class="lg:container">
+						<div class="relative flex items-center justify-between lg:justify-end h-header gap-x-6 xl:gap-x-10">
+							<button id="hamburger" class="hamburger lg:hidden p-6">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 7H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M3 17H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>                                                                    
+							</button>
+							<h1 id="logo" class="relative">
+								<a href="./index.html" class="xl:scale-150 xl:delay-200 block transform origin-top-left transition-transform">
+									<span>
+										<svg class="" width="132" height="36" viewBox="0 0 132 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M130.33 35.701H122.795C121.718 35.701 121.422 34.5052 122.176 33.4837C122.579 32.8609 123.306 31.7398 123.306 29.9709C123.306 27.6042 121.314 26.0346 117.063 26.0346C112.353 26.0346 110.039 27.5045 110.039 29.9211C110.039 31.6651 111.061 32.537 111.976 33.3841C113.349 34.6547 112.703 35.701 111.68 35.701H69.2418C67.8694 35.701 67.6541 34.4803 68.4345 33.4339C69.2418 32.2879 70.3721 31.5903 70.3721 29.8215C70.3721 27.4048 68.273 26.0346 64.1826 26.0346C59.7692 26.0346 57.2126 27.4547 57.2126 29.8713C57.2126 31.391 57.8316 32.8609 58.5851 33.5585C59.6077 34.6048 59.1502 35.701 58.3698 35.701H46.529C43.8648 35.701 43.1382 33.9073 43.1382 33.0851V27.3052C43.1382 23.4685 40.5279 20.3294 36.4374 20.3294H34.0692V24.3156C34.0692 27.928 34.8497 30.4194 35.4417 32.6616C35.8992 34.3806 34.7689 35.701 32.8852 35.701H22.6321C19.4566 35.701 18.73 33.3343 18.0841 33.3343C17.0615 33.3343 17.3575 36 11.2219 36C4.03664 35.9751 0 30.818 0 19.2581C0 6.55225 4.60177 0 13.0518 0C17.1961 0 18.9991 2.36678 20.0756 2.36678C21.2058 2.36678 21.152 0.099654 23.1972 0.099654C24.4889 0.099654 24.7311 1.6692 24.166 3.5128C23.4394 5.7301 22.8474 7.59862 22.6859 10.9121C22.5783 12.4817 22.2284 13.1045 21.5018 13.1045C18.8915 13.1045 19.349 5.70519 13.2671 5.70519C7.72344 5.70519 5.1669 11.5848 5.1669 19.1336C5.1669 26.0097 7.61579 30.3197 12.2445 30.3197C16.604 30.3197 18.434 27.8035 18.434 25.0131C18.434 22.6962 17.0077 21.5502 13.9668 20.8028C11.5179 20.1799 12.0292 17.1156 14.1282 17.1156H24.3275C25.7538 17.1156 26.4804 20.0554 24.2737 20.8526C22.7397 21.4754 22.0131 23.4187 22.0131 26.2588C22.0131 29.946 23.251 31.8893 25.3501 31.8893C27.2339 31.8893 28.2296 30.9426 28.9831 27.1557C30.0057 22.4221 29.6558 14.4498 29.602 8.89412C29.5482 6.32803 28.8216 3.91142 28.2834 3.16401C27.2069 1.54464 27.7721 0.174394 29.5213 0.174394H37.6753C45.0489 0.174394 49.4085 3.96125 49.4085 10.2145C49.4085 14.0512 46.9596 17.3149 42.9498 18.7848C46.9327 20.5785 48.332 23.2443 48.7895 26.8817C49.247 30.5689 49.9736 31.5156 50.8886 31.5156C51.6959 31.5156 52.261 30.3696 53.1491 26.6325C53.9295 23.4934 57.0512 11.1862 57.5087 8.6699C57.9661 6.15363 57.6163 3.88651 57.105 2.31696C56.7013 0.99654 57.0512 0.124567 58.2891 0.124567H69.5109C70.8296 0.124567 71.0987 1.22076 70.8296 2.26713C70.5605 3.26367 70.2644 4.63391 70.2644 6.8263C70.2644 10.3391 74.5164 24.9882 75.2699 27.5543C76.4001 31.117 77.0191 32.4374 78.0955 32.4374C79.5756 32.4374 79.7371 31.2166 82.2936 26.2339C83.8814 23.1446 88.5908 15.1972 89.9363 13.0547C91.5779 10.3889 92.6543 8.96886 92.6543 7.42422C92.6543 6.15363 91.7393 5.33149 89.4788 5.33149C86.5994 5.33149 85.1731 6.60208 84.5541 7.99723C83.989 9.21799 84.0966 10.3142 84.1505 12.9799C84.2043 14.7737 82.7242 16.3433 81.0826 16.3433C78.9836 16.3433 77.961 14.7737 77.961 13.4533C77.961 10.937 80.356 11.0367 80.356 8.79446C80.356 6.70173 79.7371 4.11073 78.3108 2.16747C77.6918 1.37024 78.2032 0.174394 80.1138 0.174394H99.7857C102.45 0.174394 102.907 2.31695 101.32 4.4346C97.875 9.0436 93.7846 16.1439 89.129 24.0664C87.8911 26.1592 87.4336 27.2554 87.4336 28.7003C87.4336 30.0706 88.6177 31.391 91.9277 31.391C93.8115 31.391 95.2647 30.1702 95.9644 29.1239C96.9332 27.8035 96.8793 25.6111 96.8793 23.3439C96.8793 20.2048 98.4133 18.7349 100.458 18.7349C101.939 18.7349 103.365 19.582 103.365 21.6249C103.365 22.7211 103.15 23.3439 101.939 24.8138C101.077 25.8104 100.755 26.9066 100.862 28.4263C101.131 31.3163 101.723 32.4125 102.719 32.4125C104.253 32.4125 104.468 31.2166 105.222 28.2768C106.406 23.7176 109.258 12.7308 110.039 9.74118C110.819 6.75156 111.115 4.11073 110.146 2.19239C109.581 1.14602 110.146 0.149481 111.331 0.149481H123.064C124.14 0.149481 124.651 1.09619 124.194 2.36678C123.575 4.08581 123.575 6.35294 124.086 9.56678C124.598 12.8305 126.858 21.7495 127.935 26.0595C128.957 30.0955 129.926 31.4657 131.379 32.9855C132.59 34.3308 131.917 35.701 130.33 35.701ZM37.0294 16.7419C41.389 16.7419 43.7841 14.2754 43.7841 10.5882C43.7841 7.39931 41.8465 5.03253 38.5634 5.03253C35.6032 5.03253 34.0961 6.6519 34.0961 9.81592V16.7419H37.0294ZM67.8963 21.9488C65.1244 8.09689 65.0706 6.30311 63.752 6.30311C62.4603 6.30311 62.4334 8.02214 59.5001 21.9488H67.8963ZM121.126 21.9488C118.3 8.04706 118.247 6.25329 116.928 6.25329C115.636 6.25329 115.636 7.97232 112.73 21.9488H121.126Z"
+												fill="currentColor"
+											></path>
+										</svg>
+									</span>
+								</a>
+							</h1>
+							<ul class="hidden lg:flex relative flex-1 justify-end items-center gap-x-6 xl:gap-x-10">
+								<li><a href="#" class="font-medium">Shop</a></li>
+								<li>
+									<a href="#" class="font-medium">About Us</a>									
+								</li>
+								<li>
+									<a href="#" class="font-medium">Glog</a>
+								</li>
+								<li>
+									<a href="#" class="font-medium">FAQs</a>
+								</li>
+								<li>
+									<a href="#" class="font-medium">Account</a>
+								</li>
+								<li>
+									<a href="#" class="font-medium">Very Cool Subscription</a>
+								</li>
+							</ul>
+							<a href="#" class="font-medium  text-text lg:bg-highlight px-6 py-6 lg:px-3 lg:py-1 lg:rounded-full lg:hover:bg-brand transition lg:border border-solid border-text">
+								<span class="hidden lg:inline-block lg:mr-1">Cart</span><span>[0]</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main-body flex-1 relative pt-promo mb-15">
+            <div id="product-hero" class=" lg:flex">
+                <div class="lg:w-1/2 lg:sticky lg:top-0 lg:h-fit">
+                    <div class="relative">
+                        
+                        <div class="swiper product-gallery-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-1.png"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-2.jpg"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-3.jpg"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-4.jpg"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-5.jpg"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-full lg:h-screen">
+                                        <div class="w-full aspect-4/5 lg:h-full lg:p-0 lg:object-cover">
+                                            <img
+                                                src="./assets/images/product-image-6.jpg"
+                                                alt="“Drizzle” &amp; “Sizzle”"
+                                                class="aspect-child"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-gallery-pagination lg:hidden text-center"></div>
+                        </div>
+                        <div class="absolute inset-0 hidden container lg:flex items-end justify-start">
+                            <div class="swiper product-gallery-nav w-14 mb-6" style="margin-left: 0px; margin-right: 0px;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-1.png"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-2.jpg"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-3.jpg"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-4.jpg"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-5.jpg"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-gallery-nav-item relative h-14 flex-shrink-0 rounded-full border-2 border-solid border-text transition cursor-pointer text-highlight" style="height: 56px;">
+                                                <img
+                                                    src="./assets/images/product-image-6.jpg"
+                                                    alt="“Drizzle” &amp; “Sizzle”"
+                                                    class="w-full h-full object-cover rounded-full pointer-events-none"
+                                                    width="56"
+                                                    height="56"
+                                                    loading="lazy"
+                                                />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:mt-full-header lg:w-1/2">
+                    <div class="py-10 flex flex-col items-center md:w-2/3 lg:w-full xl:w-3/4 mx-auto">
+                        <div class="container flex flex-col items-center">
+                            <div class="text-center">
+                                <h2 class="relative flex flex-col justify-center items-center w-fit mx-auto">
+                                    <p class="font-heading text-[46px] lg:text-[60px] -mt-3" style="line-height: 1.6; letter-spacing: -1.44px;">“Drizzle” &amp; “Sizzle”</p>
+                                    <p class="font-heading text-[46px] lg:text-[60px] -mt-2 w-fit border-b-2 border-solid border-text" style="line-height: 0.5; letter-spacing: -1.44px;">Extra Virgin Olive Oil</p>
+                                </h2>
+                            </div>
+                            <a href="#" class="mt-5 flex items-center">
+                                <div class="review-stars" style="--rating: 4.903055229142185; --color: var(--color-text); --background: var(--color-background);"></div>
+                                <div class="font-medium ml-3">1702 Reviews</div>
+                            </a>
+                        </div>
+                        <div class="w-full md:container">
+                            <form id="add-to-cart" class="w-full p-8 md:p-5 mt-2 bg-highlight border-y md:border-x border-solid border-text md:rounded-2xl">
+                                <fieldset id="product-options">
+                                    <legend class="font-medium">Quantity</legend>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+                                        <div class="product-quantity-item bg-accent transition-colors h-22 lg:h-24 rounded-lg border border-solid border-text">
+                                            <input class="visually-hidden product-quantity-radio" type="radio" id="1 Set" name="product-quantity-radio" value="1" checked/>
+                                            <label for="1 Set" class="w-full h-full flex flex-col items-center py-[10px] cursor-pointer">
+                                                <span class="font-medium text-[20px] lg:text-[24px] leading-none">1</span><span class="font-medium">Set</span>
+                                            </label>
+                                        </div>
+                                        <div class="product-quantity-item bg-transparent lg:hover:bg-background transition-colors h-22 lg:h-24 rounded-lg border border-solid border-text">
+                                            <input class="visually-hidden product-quantity-radio" type="radio" id="2 Sets" name="product-quantity-radio" value="2" />
+                                            <label for="2 Sets" class="w-full h-full flex flex-col items-center py-[10px] cursor-pointer">
+                                                <span class="font-medium text-[20px] lg:text-[24px] leading-none">2</span><span class="font-medium">Sets</span><span class="text-[10px] text-center leading-none mt-1">Free Shipping!</span>
+                                                <span class="text-[10px]">+7% Off </span>
+                                            </label>
+                                        </div>
+                                        <div class="product-quantity-item bg-transparent lg:hover:bg-background transition-colors h-22 lg:h-24 rounded-lg border border-solid border-text">
+                                            <input class="visually-hidden product-quantity-radio" type="radio" id="3 Sets" name="product-quantity-radio" value="3" />
+                                            <label for="3 Sets" class="w-full h-full flex flex-col items-center py-[10px] cursor-pointer">
+                                                <span class="font-medium text-[20px] lg:text-[24px] leading-none">3</span><span class="font-medium">Sets</span><span class="text-[10px] text-center leading-none mt-1">Free Shipping!</span>
+                                                <span class="text-[10px]">+9% Off </span>
+                                            </label>
+                                        </div>
+                                        <div class="product-quantity-item bg-transparent lg:hover:bg-background transition-colors h-22 lg:h-24 rounded-lg border border-solid border-text">
+                                            <input class="visually-hidden product-quantity-radio" type="radio" id="6 Sets" name="product-quantity-radio" value="4" />
+                                            <label for="6 Sets" class="w-full h-full flex flex-col items-center py-[10px] cursor-pointer">
+                                                <span class="font-medium text-[20px] lg:text-[24px] leading-none">6</span><span class="font-medium">Sets</span><span class="text-[10px] text-center leading-none mt-1">Free Shipping!</span>
+                                                <span class="text-[10px]">+11% Off </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="product-subscription" class="mt-3 border-y border-dashed border-text">
+                                    <div class="flex justify-between items-center py-4 cursor-pointer group one-time gap-4">
+                                        <div class="flex items-center gap-x-3">
+                                            <input type="radio" class="product-subscription-radio lg:group-hover:bg-background transition input--radio" id="one-time" name="subscription" value="false"/>
+                                            <label for="one-time" class="font-medium cursor-pointer">One Time Purchase</label>
+                                        </div>
+                                        <div class="flex gap-x-1 font-medium text-sm">
+                                            <span class="inline-block">$37</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 border-t border-dashed border-text pb-4">
+                                        <div class="flex justify-between items-center py-4 cursor-pointer group subscription" style="padding-bottom: 0px !important;">
+                                            <div class="flex items-center gap-x-3">
+                                                <input type="radio" class="product-subscription-radio lg:group-hover:bg-background transition input--radio" id="subscription" name="subscription" value="true" checked/>
+                                                <label for="subscription" class="font-medium cursor-pointer">Subscribe &amp; Save</label>
+                                            </div>
+                                            <div class="flex gap-x-1 font-medium text-sm">
+                                                <span class="inline-block line-through opacity-50">$37</span>
+                                                <span class="inline-block">$33.30</span>
+                                            </div>
+                                        </div>
+                                        <div class="subscribe-months">
+                                            <div class="h-8 custom-select relative w-full transition-height duration-200 bg-highlight border border-solid border-text rounded-xl font-medium overflow-hidden">
+                                                <label for="frequency" class="visually-hidden">Frequency</label>
+                                                <select id="frequency" name="frequency" class="visually-hidden">
+                                                    <option value="1" selected>Every 1 Month</option>
+                                                    <option value="2">Every 2 Months</option>
+                                                    <option value="3">Every 3 Months</option>
+                                                </select>
+                                                <div class="h-8 px-5 flex items-center justify-between cursor-pointer lg:hover:bg-background transition">
+                                                    <div class="flex items-center gap-x-4">
+                                                        <span class="inline-block">Frequency:</span>
+                                                        <span class="inline-block frequency-current-value">Every 1 Month</span>
+                                                    </div>
+                                                    <span>
+                                                        <svg class="transform transition-transform flex-shrink-0" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.53553 1.34217L5 4.87771L1.46447 1.34217" stroke="var(--color-text)" stroke-linecap="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <ul class="absolute top-8 inset-x-0 bg-highlight">
+                                                    <li data-month="1" class="frequency-dropdown-item h-8 px-5 flex items-center gap-x-4 cursor-pointer lg:hover:bg-background transition">
+                                                        <span class="inline-block opacity-0">Frequency:</span><span class="inline-block frequency-dropdown-value">Every 1 Month</span>
+                                                    </li>
+                                                    <li data-month="2" class="frequency-dropdown-item h-8 px-5 flex items-center gap-x-4 cursor-pointer lg:hover:bg-background transition">
+                                                        <span class="inline-block opacity-0">Frequency:</span><span class="inline-block frequency-dropdown-value">Every 2 Months</span>
+                                                    </li>
+                                                    <li data-month="3" class="frequency-dropdown-item h-8 px-5 flex items-center gap-x-4 cursor-pointer lg:hover:bg-background transition">
+                                                        <span class="inline-block opacity-0">Frequency:</span><span class="inline-block frequency-dropdown-value">Every 3 Months</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="product-purchase" class="mt-4">
+                                    <button type="submit" class="btn--std add-to-cart" data-content="Subscribe – $33.30"></button>
+                                    <div class="one-time-content" style="display: none;">
+                                        <div class="richtext block w-full text-center text-sm leading-tight font-medium mt-3">
+                                            <p>
+                                                *<strong class="font-medium">HEADS UP! MULTIPLE SETS OF DRIZZLE &amp; SIZZLE SHIP IN THE SAME BOX! TO ORDER INDIVIDUALLY PACKAGED
+                                                    GIFT SETS, </strong>
+                                                <a href="#" title="Gift Graza">
+                                                    <span class="underline"><strong class="font-medium">CLICK HERE!</strong></span>
+                                                </a>
+                                                <strong class="font-medium"> 🎁</strong>
+                                            </p>
+                                        </div>                                        
+                                        <div class="text-center text-sm mt-3 underline">Send as a gift</div>
+                                    </div>
+                                    <div class="subscription-content">
+                                        <div class="text-center text-sm mt-3">Skip or Cancel Anytime</div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="w-full container">
+                            <div class="w-full p-4 mt-5 bg-highlight border border-solid border-text rounded-2xl flex flex-row items-center">
+                                <img src="./assets/images/graza-gift-icon.png" height="75" width="75" />
+                                <div class="ml-5 font-normal">Buying multiple gifts? Send to multiple addresses <a href="#" class="underline">here</a>.</div>
+                            </div>
+                            <div class="container">
+                                <div class="mt-10 w-full">
+                                    <ul class="flex items-end justify-between w-full h-8 overflow-visible">
+                                        <li data-target="tab-description" class="nav-tab-item text-background bg-text h-9 flex items-center justify-center text-center whitespace-nowrap w-full rounded-t-lg border-t border-solid first:border-l border-r border-text cursor-pointer">
+                                            <span class="font-medium uppercase text-xs md:text-sm lg:text-base">Description</span>
+                                        </li>
+                                        <li data-target="tab-harvest" class="nav-tab-item text-text bg-transparent h-8 lg:hover:bg-highlight transition flex items-center justify-center text-center whitespace-nowrap w-full rounded-t-lg border-t border-solid first:border-l border-r border-text cursor-pointer"
+                                        >
+                                            <span class="font-medium uppercase text-xs md:text-sm lg:text-base">Harvest</span>
+                                        </li>
+                                        <li data-target="tab-use-cases" class="nav-tab-item text-text bg-transparent h-8 lg:hover:bg-highlight transition flex items-center justify-center text-center whitespace-nowrap w-full rounded-t-lg border-t border-solid first:border-l border-r border-text cursor-pointer"
+                                        >
+                                            <span class="font-medium uppercase text-xs md:text-sm lg:text-base">Use Cases</span>
+                                        </li>
+                                    </ul>
+                                    <div class="nav-tab-content">
+                                        <div class="nav-tab-content-item active py-5 px-3 border border-solid border-text rounded-b-lg space-y-5" id="tab-description">
+                                            <p><strong></strong><strong>Drizzle: 500ML</strong><br /></p>
+                                            <p>Extra Virgin finishing oil made from olives that are picked early, when flavor is bold and antioxidants are highest. Made for eating, never heating.</p>
+                                            <p>
+                                                <strong>Sizzle: 750ML<br /></strong>Extra Virgin cooking oil made from mature, mid-season olives that yield a more mellow flavor. Use it every day, in every way.
+                                            </p>
+                                        </div>
+                                        <div class="nav-tab-content-item py-5 px-3 border border-solid border-text rounded-b-lg space-y-5" id="tab-harvest">
+                                            <strong>Drizzle:</strong><br>
+                                            Harvested in October, before the olives have ripened fully. Picked by hand because young olives need a firm yank to loosen up. 
+                                            <br><br>
+                                            <strong>Sizzle:</strong><br>
+                                            Harvested in November and December, when the olives are more mature. They’re pretty laid back by this point, so it only takes a few shakes to get them off the branch.
+                                        </div>
+                                        <div class="nav-tab-content-item py-5 px-3 border border-solid border-text rounded-b-lg space-y-5" id="tab-use-cases">
+                                            <strong>Drizzle:</strong><br>
+                                            A little Drizzle goes a long way! Use it on and around things like ice cream, pesto, popcorn, salads, sandwiches or even directly on your tongue (we won’t tell).
+                                            <br><br>
+                                            <strong>Sizzle:</strong><br>
+                                            If you would put it in or on top of an oven, use sizzle. Chicken Cutlets, Sheet Pan Veggies, Fried Rice, or even Chocolate Chip Cookies! You name it, Sizzle sizzles it.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+		</div>
+		<script src="./assets/vendors/jquery-2.2.4.min.js"></script>
+		<script src="./assets/vendors/swiper@11.1.0/swiper-bundle.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
